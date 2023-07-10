@@ -146,8 +146,8 @@ header .shopping span{
               </div>
           </header>
   
-          <div class="list text-lg font-medium text-gray-900">
-            
+          <div class="list text-lg font-medium text-gray-900  mx-auto grid max-w-7xl max-h-3xl  grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
           </div>
       </div>
       <div class="card">
@@ -211,7 +211,7 @@ function initApp(){
         
       
      
-        <div class=" mx-auto grid max-w-7xl max-h-3xl  grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
           <!-- Article -->
           <article class=" rounded  bg-gray-200 p-2 shadow-lg hover:shadow-xl hover:bg-white    hover:transform hover:scale-105 duration-300 ">
               <div class="flex flex-row-reverse ">
@@ -245,8 +245,7 @@ function initApp(){
                     <a href=${value.link}>3D View
                 </button>
               </div>
-          </article>
-        </div>`
+          </article>`
             
            ;
         list.appendChild(newDiv);
@@ -285,6 +284,7 @@ function reloadCard(){
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
+    window.sessionStorage.setItem('cart', JSON.stringify(listCards));
 }
 function changeQuantity(key, quantity){
     if(quantity == 0){
