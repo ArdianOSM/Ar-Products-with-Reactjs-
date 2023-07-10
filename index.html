@@ -143,6 +143,16 @@ header .shopping span{
     margin: 0 10px;
 }
 
+.button1{
+    margin-bottom: 30px;
+   
+
+}
+.button2{
+    margin-right: 150px;
+    
+}
+
 
 </style>
 
@@ -154,7 +164,7 @@ header .shopping span{
     <div class="px-3">
       <nav class="bg-white border-white dark:bg-white">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="file:///C:/xampp/htdocs/Ar/Products.html" class="flex items-center">
+          <a href="" class="flex items-center">
               <img src="img/YOLOWAY_Logo.png" class="h-14 mr-4" alt="Flowbite Logo" />
       
                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -163,12 +173,12 @@ header .shopping span{
                       <ul class="relative flex w-full items-center justify-between space-x-2 sm:space-x-4">
                         <li class="flex items-center space-x-3 text-left sm:space-x-4">
                           <a class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-200 text-xs font-semibold text-emerald-700  ring-offset-2"
-                            href="Products.html">
+                            href="index.html">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                               stroke="currentColor" stroke-width="2">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg></a>
-                            <a href="Products.html">
+                            <a href="index.html">
                           <span class="font-semibold text-gray-900  ">Shop</span>
                         </a>
                         </li>
@@ -192,6 +202,9 @@ header .shopping span{
           </div>
           </a>
         </div>
+
+
+        
         <div class="container">
           <header>
               <h1>Products</h1>
@@ -236,19 +249,22 @@ let products = [
         id: 1,
         name: 'Omega',
         image: 'omega.png',
-        price: 120000
+        price: 120000,
+        link:'Ar-omega.html'
     },
     {
         id: 2,
         name: 'Titoni',
         image: 'titoni.png',
-        price: 120000
+        price: 120000,
+        link:'Ar-Titoni.html'
     },
     {
         id: 3,
         name: 'Germini',
         image: 'garmini.png',
-        price: 220000
+        price: 220000,
+        link:'Ar-Garmini.html'
     },
     {
         id: 4,
@@ -278,7 +294,11 @@ function initApp(){
             <img src="img/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`
+            <p>This Description</p>
+            <div class='Buttons'>
+            <button class='button1' onclick="addToCard(${key})">Add To Card</button>
+            <button class='button2'><a href=${value.link}><3D View</button></div>
+                `
             
            ;
         list.appendChild(newDiv);
