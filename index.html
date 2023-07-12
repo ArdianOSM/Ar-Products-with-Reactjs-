@@ -96,9 +96,7 @@ header .shopping span{
     justify-content: center;
     align-items: center;
 }
-.listCard li img{
-    width: 100%;
-}
+
 .listCard li button{
     background-color: #fff5;
     border: 50px;
@@ -175,14 +173,16 @@ header .shopping span{
 
           </div>
       </div>
-      <div class="card bg-white sm:px-4  ">
-          <h1 class="text-lg font-medium text-gray-900">Shopping Cart</h1>
+      <div class="card flex items-start justify-between">
+        <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
           <ul class="listCard border bg-white text-black">
           </ul>
           <div class="checkOut bg-white ">
             <a href="checkout.html">
               <div class="total flex items-center justify-center rounded-md border border-transparent bg-blue-500 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-blue-400">€0</div></a>
-              <div class="closeShopping flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Close</div>
+              <div class="closeShopping flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-indigo-700"><span>close</span><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg></div>
           </div>
       </div>
       
@@ -314,12 +314,12 @@ function reloadCard(){
             newDiv.innerHTML = `
                 <div class='justify-between flex sm:630px  ' >
                  
-                    <img class='h-full w-full object-cover object-center'  src="img/${value.image}"/>
+                    <img class='h-full w-full  object-left w-100%'  src="img/${value.image}"/>
                   </div>
                     </div>
                 <div class='text-black font-semibold'>${value.name}</div>
-                <div class='text-black font-semibold'>${value.price.toLocaleString()}</div>
-                <div class='sm:w-7 '  >
+                <div class='text-black absolute  font-semibold'>${value.price.toLocaleString()}</div>
+                <div class='sm:w-6 '  >
                     <button class='text-black border border-black ' onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count text-black font-semibold">${value.quantity}</div>
                     <button class='text-black font-semibold' onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
