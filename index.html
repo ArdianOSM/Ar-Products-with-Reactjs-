@@ -120,9 +120,9 @@ header .shopping span{
 <body class="bg-white rounded">
   <!-- Tab Menu -->
  <!-- Tab Menu -->
- <div class="min-w-screen min-h-screen bg-white py-3">
+ <div class="min-w-screen min-h-screen bg-slate-100 py-3">
     <div class="px-3">
-      <nav class="bg-white border-white dark:bg-white">
+      <nav class="bg-white border-white dark:bg-slate-100">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="index.html" class="flex items-center">
               <img src="img/YOLOWAY_Logo.png" class="h-14 mr-4" alt="Flowbite Logo" />
@@ -179,12 +179,15 @@ header .shopping span{
           <h1 class="text-lg font-medium text-gray-900">Shopping Cart</h1>
           <ul class="listCard border bg-white text-black">
           </ul>
-          <div class="checkOut bg-white">
+          <div class="checkOut bg-white ">
             <a href="checkout.html">
               <div class="total flex items-center justify-center rounded-md border border-transparent bg-blue-500 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-blue-400">€0</div></a>
               <div class="closeShopping flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Close</div>
           </div>
       </div>
+      
+
+
   </body>
       <script>
 let openShopping = document.querySelector('.shopping');
@@ -205,30 +208,30 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-        name: 'Omega',
+        name: 'GLOBEMASTERCO‑AXIAL MASTER CHRONOMETER ',
         image: 'omega.png',
-        price: 120000,
+        price: 1200,
         link:'Ar-omega.html'
     },
     {
         id: 2,
-        name: 'Titoni',
+        name: 'Titoni,83600 CBK-T1-256SEASCOPER',
         image: 'titoni.png',
-        price: 120000,
+        price: 1200,
         link:'Ar-Titoni.html'
     },
     {
         id: 3,
-        name: 'Germini',
+        name: 'Germin,fēnix® 2 Special Edition',
         image: 'garmini.png',
-        price: 220000,
+        price: 1200,
         link:'Ar-Garmini.html'
     },
     {
         id: 4,
-        name: 'Omega',
+        name: 'GLOBEMASTERCO‑AXIAL MASTER CHRONOMETER',
         image: 'omega.png',
-        price: 220000,
+        price: 1200,
         link:'Ar-omega.html'
     },
     
@@ -246,39 +249,44 @@ function initApp(){
      
 
           <!-- Article -->
-          <article class=" tracking-wider rounded-lg   p-2 shadow-lg hover:shadow-xl hover:bg-gray-200 bg-gray-900   hover:transform hover:scale-105 duration-300 ">
-              <div class="flex flex-row-reverse ">
-              </div>
-            <div class="relative flex items-end overflow-hidden rounded-xl">
-              <img src="img/${value.image}" />
-            </div>
-            <div class="mt-0 p-3 bg-gray-900  rounded font-bold text-blue-500 text-2xl   ">${value.name}
-              <div class="font-bold flex float-right text-blue-500 text-base  ">€ ${value.price.toLocaleString()}</div>
-              <div>
-                <p class="mt-3 p-1 text-sm text-white font-semibold">Omega went to sale this december 2022 winning the
-                  most sales in 24 hours
-                </p>
-              </div>
-
-             
-              <div class='flex justify-between'>
-                <button type="button"
-                  class="text-white rounded-lg bg-blue-400 sm:flex hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold  text-sm px-2 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-400 dark:hover:bg-blue-700 dark:focus:ring-blue-800 button_" ' onclick="addToCard(${key})" >
-                  <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor" viewBox="0 0 18 21">
-                    <path
-                      d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
-                  </svg>
-                  Add to Card
-                </button>
-        
-                <button type="button"
-                  class="text-white  p-3 rounded-lg bg-gray-300 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:bg-blue-400 font-medium  text-sm px-4 py-2  flex-row-reverse text-center inline-flex items-center justify-self-end dark:bg-gray-400 dark:hover:bg-blue-700 dark:focus:ring-blue-800 button_">
-                  <svg class=' flex ml-3' width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.2857 18V21.0737L18 16.788V11.1429C17.9999 10.9837 17.9555 10.8277 17.8718 10.6924C17.7881 10.5571 17.6684 10.4477 17.526 10.3766L12.8571 8.04086V3.28114L15.0737 5.49771L16.2857 4.28571L12 0L7.71429 4.28571L8.92629 5.49771L11.1429 3.28114V8.04171L6.474 10.3757C6.33151 10.4469 6.21169 10.5564 6.12796 10.6919C6.04424 10.8274 5.99993 10.9836 6 11.1429V16.788L1.71429 21.0737V18H0V24H6V22.2857H2.92629L7.026 18.186L11.6169 20.4814C11.7358 20.5408 11.867 20.5717 12 20.5717C12.133 20.5717 12.2642 20.5408 12.3831 20.4814L16.974 18.186L21.0737 22.2857H18V24H24V18H22.2857ZM11.1429 18.3274L7.71429 16.6131V12.5297L11.1429 14.244V18.3274ZM12 12.756L8.77371 11.1429L12 9.52971L15.2263 11.1429L12 12.756ZM16.2857 16.6131L12.8571 18.3274V14.244L16.2857 12.5297V16.6131Z" fill="white"/>
-              </svg>
-                    <a href=${value.link}>3D View</button>
-              </div>
+          <div class="w-full relative hover  hover:transform hover:scale-105 duration-300  max-w-sm bg-white rounded-2xl shadow-2xl shadow-slate-300 dark:bg-white dark:border-white">
+    <a href=${value.link}>
+      
+      <div class='absolute top-0 left-0 flex justify-right '>
+      <button class='m-6 text-yellow-500 hover:text-white border border-yellow-500 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-500 dark:text-yellow-500 dark:hover:text-white dark:hover:bg-yellow-500 dark:focus:ring-yellow-900'>3D</button>
+      
+      </div>
+        <img class="p-8 pb-4 pt-12 rounded-t-lg" src="img/${value.image}"/>
+    </a>
+   
+    <div class="px-8 pb-8">
+        <a href="#">
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-slate-900">${value.name}</h5>
+        </a>
+        <div class="flex items-center mt-2.5 mb-5">
+            <svg class="w-4 h-4 text-yellow-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-gray-200 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2 py-0.5 rounded-lg dark:bg-blue-100 dark:text-blue-900 ml-3">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-slate-800 dark:text-black">€ ${value.price.toLocaleString()}</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="addToCard(${key})"  >Add to cart</a>
+        </div>
+    </div>
+</div>
           </article>`
             
            ;
