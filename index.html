@@ -23,15 +23,15 @@ header .shopping{
 
 
 header .shopping span{
-    background: blue;
+    background: ;
     border-radius: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: blue;
     position: absolute;
-    top: -5px;
-    left: 80%;
+    top: -12px;
+    left: 20%;
     padding: 3px 10px;
 }
 
@@ -39,14 +39,14 @@ header .shopping span{
     position: fixed;
     top:0;
     left: 100%;
-    width: 500px;
+    /* max-width: 500px; */
     background-color: gray;
     height: 100vh;
     transition: 0.5s;
     
 }
 .active .card{
-    left: calc(100% - 500px);
+    left: calc(100% - 370px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -58,7 +58,7 @@ header .shopping span{
 @media (max-width: 450px) {
  
  .active .card {
-   left:calc(80% - 250px);
+   left: 0;
    
  }
  
@@ -72,9 +72,6 @@ header .shopping span{
 
 
 
-@media (min-width: 576px) { 
-
- }
 
 </style>
 
@@ -275,7 +272,7 @@ function initApp(){
             
             <span class="text-2xl font-bold text-slate-800 dark:text-black">€ ${value.price.toLocaleString()}</span>
             <button type="button"
-            class="text-white rounded-lg bg-blue-600 sm:flex hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold  text-sm px-2 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 button_"onclick="addToCard(${key})" >
+            class="text-white rounded-lg bg-blue-500 sm:flex hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold  text-sm px-2 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-400 dark:hover:bg-blue-700 dark:focus:ring-blue-800 button_"onclick="addToCard(${key})" >
             <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               fill="currentColor" viewBox="0 0 18 21">
               <path
