@@ -61,51 +61,16 @@ header .shopping span{
    left:calc(111% - 500px);
    
  }
- .card .checkOut {
-    position: absolute;
-    bottom: 0;
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
-
+ 
 }
 
 
-.card .checkOut{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
-}
 
-.card .checkOut div:nth-child(2){
-    background-color: #1C1F25;
-    color: #fff;
-}
-.listCard li{
-    display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
-    color: #fff;
-    row-gap: 10px;
-}
-.listCard li div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.listCard li img{
-    width: 100%;
-}
-.listCard li button{
-    background-color: #fff5;
-    border: 50px;
-}
-.listCard .count{
-    margin: 0 10px;
-}
+
+
+
+
 
 @media (min-width: 576px) { 
 
@@ -165,26 +130,51 @@ header .shopping span{
         <div class="container  ">
           <header>
               <h1 class="font-bold font-5xl text-left"></h1>
-              <div class="shopping sm:items-left w-8 items-center">
-                <img src="img/shopping.svg"  >
-                  <span class="w-7 text-blue-500 quantity">0</span>
+              <div class="shopping sm:items-left w-8 h-8 items-center">
+                <img src="img/shopping2.svg"  >
+                  <span class="w-3  quantity">0</span>
               </div>
           </header>
   
           <div class="list text-lg font-medium text-gray-900  mx-auto grid max-w-7xl max-h-3xl  grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
           </div>
+          <div class="card bg-white flex flex-col border-t border-gray px-4 py-6 sm:px-8 sm:py-4    ">
+            <h1 class="text-lg font-medium text-center text-gray-900">Shopping Cart</h1>
+            <button type="button" class="-m-2 p-2 flex justify-end text-gray-400 hover:text-gray-500">
+                <span   class="sr-only  ">Close panel</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            <ul class="listCard  bg-white text-black">
+            </ul>
+            
+         
+            <div class="border-t border-gray-200 px-4 py-6 sm:px-6 static flex flex-col flex-1 justify-end bottom-0 ">
+              <div class=" flex justify-between text-base font-medium text-gray-900">
+                <p>Subtotal</p>
+                <p class="total">$0</p>
+              </div>
+              <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+              <div class="mt-6">
+                <a href="checkout.html" class="check0ut flex items-center justify-center rounded-md   bg-blue-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-800">Checkout</a>
+              </div>
+              <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                <p>
+                  or
+                  <button type="button" class="closeShopping font-medium text-indigo-600 hover:text-indigo-500">
+                    Continue Shopping
+                    <span aria-hidden="true"> &rarr;</span>
+                  </button>
+                </p>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="card bg-white sm:px-4  ">
-          <h1 class="text-lg font-medium text-gray-900">Shopping Cart</h1>
-          <ul class="listCard border bg-white text-black">
-          </ul>
-          <div class="checkOut bg-white ">
-            <a href="checkout.html">
-              <div class="total flex items-center justify-center rounded-md border border-transparent bg-blue-500 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-blue-400">€0</div></a>
-              <div class="closeShopping flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-1 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Close</div>
-          </div>
-      </div>
+    
+     
+
       
 
 
@@ -250,10 +240,10 @@ function initApp(){
 
           <!-- Article -->
           <div class="w-full relative hover  hover:transform hover:scale-105 duration-300  max-w-sm bg-white rounded-2xl shadow-2xl shadow-slate-300 dark:bg-white dark:border-white">
-    <a href="#">
+    <a href="">
       
       <div class='absolute top-0 left-0 flex justify-right '>
-      <button class='m-6 text-yellow-600 hover:text-white border border-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-600 dark:text-yellow-600 dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-900'>3D</button>
+      <button class='m-6 text-yellow-600 hover:text-white border border-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-600 dark:text-yellow-600 dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-900'> <a href=${value.link}>3D</button>
       
       </div>
         <img class="p-8 rounded-t-lg" src="img/${value.image}"/>
@@ -283,7 +273,9 @@ function initApp(){
         </div>
         <div class="flex items-center justify-between">
             <span class="text-2xl font-bold text-slate-800 dark:text-black">€ ${value.price.toLocaleString()}</span>
-            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="addToCard(${key})"  >Add to cart</a>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="addToCard(${key})" > 
+                Add to cart
+                </a>
         </div>
     </div>
 </div>
@@ -312,18 +304,49 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div class='justify-between flex sm:630px  ' >
-                 
-                    <img class='h-full w-full object-cover object-center'  src="img/${value.image}"/>
-                  </div>
+                 <div class='mt-8'>
+                    <div class='flow-root'>
+                        <ul role='list' class='-my-6 divide-y divide-gray-200'>
+                            <li class='flex py-6'>
+                                <div class='h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
+                                    <img  src="img/${value.image}">
+                                </div>
+                                <div class="ml-4 flex flex-1 flex-col">
+                        <div>
+                          <div class="flex justify-between text-base font-medium text-gray-900">
+                            <h3>
+                              <a href="#">${value.name}</a>
+                            </h3>
+                            <p class="ml-4">${value.price.toLocaleString()}</p>
+                          </div>
+                          <p class="mt-1 text-sm text-gray-500">yoloway-Shop</p>
+                        </div>
+                        <div class="flex flex-1 items-end justify-between text-sm">
+                          <p class="text-gray-500">Qty 1</p>
+
+                          <div class="flex">
+                            <button type="button" class=" font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                            </li>
+                        </ul>
+                        <div>
+                        </div>
                     </div>
-                <div class='text-black font-semibold'>${value.name}</div>
-                <div class='text-black font-semibold'>${value.price.toLocaleString()}</div>
-                <div class='sm:w-7 '  >
-                    <button class='text-black border border-black ' onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
-                    <div class="count text-black font-semibold">${value.quantity}</div>
-                    <button class='text-black font-semibold' onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
-                </div>`;
+                </div>
+               
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                `;
                 listCard.appendChild(newDiv);
         }
     })
