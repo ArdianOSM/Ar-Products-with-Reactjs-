@@ -12,51 +12,10 @@
 
 <body>
 <style>
-  body {
-    margin: 1em;
-    padding: 5;
-    font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
-    color: #244376;
-  }
+ 
   
   
-  #card {
-    margin:7em auto;
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-  }
   
-  model-viewer {
-    width: 100%;
-    height: 100%;
-    background-color: #70BCD1;
-    --poster-color: #ffffff00;
-  }
-  
-  .attribution {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1em;
-  }
-  
-  .attribution h1 {
-    margin: 0 0 0.25em;
-  }
-  
-  .attribution img {
-    opacity: 0.5;
-    height: 2em;
-  }
-  
-  .attribution .cc {
-    flex-shrink: 0;
-    text-decoration: none;
-  }
   
  
 </style>
@@ -80,15 +39,37 @@
 
     <!-- Container of Description -->
 
-    <div class="container mx-auto py-9 md:py-15 lg:py-24 bg-slate-100  ">
+    <div class="container  py-7 md:py-15 lg:py-24 bg-slate-100  ">
 
-      <div class="flex flex-col lg:flex-row justify-left items-strech mx-4">
+      <div class="flex flex-col lg:flex-row items-center  mx-4">
 
         <div class="lg:w-4/12 flex justify-center items-center">
           <div class="max-w-sm bg-white rounded-lg shadow dark:bg-white dark:border-gray-700">
     <a href="#">
       
-        <img class="rounded-t-lg  items-center" src="img/omega.png" alt="" />
+      <div className="flex justify-center  m-6 flex-1 bg-white rounded-xl shadow-slate-100 border border-slate-200 items-center ">
+                <model-viewer
+                    // className="model-viewer"
+                    src="img/Garmin_fenix_Render-removebg-preview (1).png"
+                    alt="A rock"
+
+                    camera-controls
+                    style={{ width: "100%", height: "100%" }}
+                    ar
+
+                    min-camera-orbit='auto auto 100%'
+                    max-camera-orbit='auto auto 100%'
+                    min-field-of-view='50deg'
+                    max-field-of-view='110deg'
+
+                // ref={(ref) => 
+                
+
+                    <button slot="ar-button" className="bg-slate-800 text-white m-6 py-2 px-4 rounded-full text-sm right-0 absolute" >
+                        👋 Activate AR
+                    </button>
+                </model-viewer>
+            </div>
       
     </a>
     <div class="p-5">
@@ -121,12 +102,7 @@
 
 
 
-        <div class="lg:w-12/12 mt-6 md:mt-8 lg:mt-1">
-          <div class="w-full h-full">
-            <model-viewer src="./img/OmegaOptimised (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-              poster="poster.webp" shadow-intensity="1"> </model-viewer>
-          </div>
-      </div>
+       
     </div>
     
     
