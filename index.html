@@ -23,12 +23,12 @@ header .shopping{
 
 
 header .shopping span{
-    background: ;
+    background:white transparent ;
     border-radius: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
+    color: white;
     position: absolute;
     top: -12px;
     left: 20%;
@@ -66,6 +66,7 @@ header .shopping span{
 
 
 
+
  
 
 
@@ -79,12 +80,14 @@ header .shopping span{
 
 
 
-<body class="bg-white rounded">
+<body class="bg-gradient-to-r from-cyan-700 to-blue-500">
+ 
+  
   <!-- Tab Menu -->
  <!-- Tab Menu -->
- <div class="min-w-screen min-h-screen bg-slate-100 py-3">
+ <div class="min-w-screen min-h-screen bg-gradient-to-r from-cyan-700 to-blue-500 py-3">
     <div class="px-3">
-      <nav class="bg-white border-white dark:bg-slate-100">
+      <nav class="bg-gradient-to-r from-cyan-700 to-blue-500">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="index.html" class="flex items-center">
               <img src="img/YOLOWAY_Logo.png" class="h-14 mr-4" alt="Flowbite Logo" />
@@ -136,7 +139,7 @@ header .shopping span{
           <div class="list text-lg font-medium text-gray-900  mx-auto grid max-w-7xl max-h-3xl  grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
           </div>
-          <div class="card bg-white flex flex-col border-t border-gray px-4 py-6 sm:px-8 sm:py-4 sm:flex   ">
+          <div class="card bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col border-t border-gray px-4 py-6 sm:px-8 sm:py-4 sm:flex   ">
             <h1 class="text-lg font-medium text-center text-gray-400">Shopping Cart</h1>
             <button type="button" class="-m-2 p-2 flex justify-end text-gray-400 hover:text-gray-500">
                 <span   class="sr-only  ">Close panel</span>
@@ -236,11 +239,11 @@ function initApp(){
      
 
           <!-- Article -->
-          <div class="w-full relative hover  hover:transform hover:scale-105 duration-300  max-w-sm bg-white rounded-2xl shadow-2xl shadow-slate-300 dark:bg-white dark:border-white">
+          <div class="w-full relative hover  hover:transform hover:scale-105 duration-300  max-w-sm bg-gradient-to-r from-blue-900 to-blue-600 rounded-2xl shadow-2xl shadow-slate-300 dark:bg-white dark:border-white">
     <a href="">
       
       <div class='absolute top-0 left-0 flex justify-right '>
-      <button class='m-6 text-yellow-600 hover:text-white border border-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-600 dark:text-yellow-600 dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-900'> <a href=${value.link}>3D</button>
+      <button class='m-6 text-yellow-500 hover:text-white border border-yellow-500 hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-600 dark:text-yellow-600 dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-900'> <a href=${value.link}>3D</button>
       
       </div>
         <img class="p-8 rounded-t-lg" src="img/${value.image}"/>
@@ -248,7 +251,7 @@ function initApp(){
    
     <div class="px-8 pb-8">
         <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-slate-900">${value.name}</h5>
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${value.name}</h5>
         </a>
         <div class="flex items-center mt-2.5 mb-5">
             <svg class="w-4 h-4 text-yellow-500 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
@@ -270,7 +273,7 @@ function initApp(){
         </div>
         <div class="flex items-center justify-between">
             
-            <span class="text-2xl font-bold text-slate-800 dark:text-black">€ ${value.price.toLocaleString()}</span>
+            <span class="text-2xl font-bold text-white dark:text-white">€ ${value.price.toLocaleString()}</span>
             <button type="button"
             class="text-white rounded-lg bg-blue-500 sm:flex hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold  text-sm px-2 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-400 dark:hover:bg-blue-700 dark:focus:ring-blue-800 button_"onclick="addToCard(${key})" >
             <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -308,11 +311,11 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                 <div class='mt-8'>
+                 <div class='mt-0  bg-gradient-to-r from-cyan-700 to-blue-500 rounded'>
                     <div class='flow-root'>
-                        <ul role='list' class='-my-6 divide-y divide-gray-200'>
+                        <ul role='list' class='-my-6 divide-y'>
                             <li class='flex py-6'>
-                                <div class='h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
+                                <div class='h-24 w-24 flex-shrink-0 overflow-hidden rounded-md  '>
                                     <img  src="img/${value.image}">
                                 </div>
                                 <div class="ml-4 flex flex-1 flex-col">
@@ -323,10 +326,10 @@ function reloadCard(){
                             </h3>
                             <p class="ml-4">${value.price.toLocaleString()}</p>
                           </div>
-                          <p class="mt-1 text-sm text-gray-500">yoloway-Shop</p>
+                          <p class="mt-1 text-sm text-white">yoloway-Shop</p>
                         </div>
                         <div class="flex flex-1 items-end justify-between text-sm">
-                          <p class="text-gray-500">Qty 1</p>
+                          <p class="text-white">Qty 1</p>
 
                           <div class="flex">
                             <button type="button" class=" font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
