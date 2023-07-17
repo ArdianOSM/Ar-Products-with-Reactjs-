@@ -138,8 +138,8 @@ header .shopping span{
           </header>
   
           <div class="list text-lg font-medium text-gray-900  mx-auto grid max-w-7xl max-h-3xl  grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
           </div>
+         
           <div class="card bg-gradient-to-r from-white to-gray-400 flex flex-col border-t border-gray px-4 py-6 sm:px-8 sm:py-4 sm:flex   ">
             <h1 class="text-lg font-medium text-center text-black">Shopping Cart</h1>
             <button type="button" class="-m-2 p-2 flex justify-end text-gray-400 hover:text-gray-500">
@@ -330,7 +330,9 @@ function reloadCard(){
                           <p class="mt-1 text-sm text-black">yoloway-Shop</p>
                         </div>
                         <div class="flex flex-1 items-end justify-between text-sm">
-                          <p class="text-black">Qty 1</p>
+                          <button class='text-black  ' onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class="count text-black font-semibold">${value.quantity}</div>
+                    <button class='text-black font-semibold' onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
 
                           <div class="flex">
                             <button type="button" class=" font-medium text-yellow-600 hover:text-blue-300">Remove</button>
