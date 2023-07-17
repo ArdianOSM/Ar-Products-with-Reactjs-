@@ -24,7 +24,7 @@ header .shopping{
 
 header .shopping span{
     background:white;
-    border-radius: 60%;
+    border-radius: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +131,7 @@ header .shopping span{
         <div class="container ">
           <header>
               <h1 class="font-bold font-5xl text-left"></h1>
-              <div class="shopping sm:items-left w-8 h-10 items-center border bg-white rounded-2xl  ">
+              <div class="shopping sm:items-left w-8 h-10 items-center  bg-gray-100 rounded-3xl  ">
                 <img  src="img/shoppingcart4.svg"  >
                   <span class="w-5 h-4 font-bold quantity">+</span>
               </div>
@@ -148,7 +148,7 @@ header .shopping span{
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-            <ul class="listCard  bg-white text-black">
+            <ul class="listCard  bg-gradient-to-r from-white to-gray-400 text-black">
             </ul>
             
          
@@ -312,8 +312,8 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                 <div class='mt-5 bg-gradient-to-r from-gray-300 to-gray-400 rounded'>
-                    <div class='bg-gradient-to-r from-white to-gray-400 rounded'>
+                 <div class='mt-10 '>
+                    <div class='bg-gradient-to-r from-white to-gray-400 rounded '>
                         <ul role='list' class='-my-6 divide-y'>
                             <li class='flex py-7'>
                                 <div class='h-24 w-24 flex-shrink-0 overflow-hidden   '>
@@ -321,7 +321,7 @@ function reloadCard(){
                                 </div>
                                 <div class="ml-4 flex flex-1 flex-col">
                         <div>
-                          <div class="flex justify-between text-base font-medium text-black">
+                          <div class="flex justify-between text-base font-medium text-black bg-trans">
                             <h3>
                               <a href="#">${value.name}</a>
                             </h3>
