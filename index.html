@@ -140,7 +140,7 @@ header .shopping span{
           <div class="list text-lg font-medium text-gray-900  mx-auto grid max-w-7xl max-h-3xl  grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           </div>
          
-          <div class="card bg-black flex flex-col border-t border-gray px-4 py-6 sm:px-8 sm:py-4 sm:flex   ">
+          <div class="card bg-black flex flex-col  px-4 py-6 sm:px-8 sm:py-4 sm:flex   ">
             <h1 class="text-lg font-medium text-center text-white">Shopping Cart</h1>
             <button type="button" class="-m-2 p-2 flex justify-end text-gray-400 hover:text-gray-500">
                 <span   class="sr-only  ">Close panel</span>
@@ -297,9 +297,9 @@ function initApp(){
         </div>
         <div class="flex items-center justify-between">
             
-            <span class="text-2xl font-bold text-white dark:text-white">€ ${value.price.toLocaleString()}</span>
+            <span class="text-2xl font-bold text-white  dark:text-white">€ ${value.price.toLocaleString()}</span>
             <button type="button"
-            class="text-white  bg-transparent border rounded-full sm:flex hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-semibold  text-sm px-2 py-2.5 text-center inline-flex items-center mr-2 dark:bg-transparent dark:hover:bg-white dark:focus:ring-white button_"onclick="addToCard(${key})" >
+            class="text-white  bg-transparent border hover:text-black rounded-full sm:flex hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-semibold  text-sm px-2 py-2.5 text-center inline-flex items-center mr-2 dark:bg-transparent dark:hover:bg-white dark:focus:ring-white button_"onclick="addToCard(${key})" >
             <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               fill="currentColor" viewBox="0 0 18 21">
               <path
