@@ -1,3 +1,7 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 <!doctype html>
 <html>
 
@@ -124,7 +128,18 @@ header .shopping span{
                 </div>
           </div>
           </a>
+
         </div>
+       
+    <div class="video-docker absolute  top-50 left-50 mx-auto w-full h-full overflow-hidden">
+        <video class="min-w-full min-h-full absolute object-cover" src="img/Precision at every level.mp4" type="video/mp4" autoplay muted loop></video>
+    </div>
+   
+
+
+          
+      
+      
 
 
         
@@ -235,8 +250,10 @@ function initApp(){
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-        
-      
+
+   
+
+       
      
 
           <!-- Article -->
