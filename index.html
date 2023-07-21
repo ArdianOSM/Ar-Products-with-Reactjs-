@@ -176,7 +176,7 @@ header .shopping span{
               <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
                 <p>
                   or
-                  <button type="button" class="closeShopping font-medium text-yellow-600 hover:text-indigo-500">
+                  <button type="button" class="closeShopping font-medium text-yellow-600 hover:text-white">
                     Continue Shopping
                     <span aria-hidden="true"> &rarr;</span>
                   </button>
@@ -213,6 +213,7 @@ let products = [
         id: 1,
         name: 'Globemaestro‑Axial Master Chronometer ',
         image: 'omega.png',
+        src: 'OmegaOptimised (1).glb',
         price: 1200,
         link:'Ar-omega.html'
     },
@@ -220,6 +221,7 @@ let products = [
         id: 2,
         name: 'Titoni,83600 CBK-T1-256SEASCOPER',
         image: 'titoni.png',
+        src: 'TitoniFinalOptimised0 (2).glb',
         price: 1200,
         link:'Ar-Titoni.html'
     },
@@ -227,6 +229,7 @@ let products = [
         id: 3,
         name: 'Germin,fēnix® 2 Special Edition',
         image: 'garmini.png',
+        src: 'TitoniFinalOptimised0 (2).glb',
         price: 1200,
         link:'Ar-Garmini.html'
     },
@@ -258,10 +261,11 @@ function initApp(){
     <a href="">
       
      
-      <div className="flex justify-center  m-6 flex-1  rounded-xl   border border-slate-200 w-full h-full items-center ">
+     
+      <div className="flex justify-center  m-6 flex-1  rounded-xl   border border-slate-200 w-full h-full items-center ${value.src}  ">
                         <model-viewer
                             // className="model-viewer"
-                            src="img/OmegaOptimised (1).glb,"
+                            src="${value.src},"
                             alt="A rock"
         
                             camera-controls
